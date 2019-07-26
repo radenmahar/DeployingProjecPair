@@ -16,7 +16,7 @@
        
     <div class="row justify-content-center">
          <div class="col-6 bg-light border-dark">
-             <a href="detail/{{eachlowongan.id}}">{{eachlowongan.posisi}}</a>
+             <a href="{% url 'detail' eachlowongan.id %}">{{eachlowongan.posisi}}</a>
         <div class="row">
             <div class="col-6">
                 <button class="accordion bg-light"><p style="margin: 0; padding-left: 0; position: relative; left: -14px;">{{eachlowongan.perusahaan|linebreaksbr}}
@@ -46,7 +46,7 @@
        
     <div class="row justify-content-center">
          <div class="col-6 bg-light border-dark">
-             <a href="detail/{{eachperusahaan.id}}">{{eachperusahaan.posisi}}</a>
+             <a href="{% url 'detail' eachperusahaan.id %}">{{eachperusahaan.posisi}}</a>
         <div class="row">
             <div class="col-6">
                 <button class="accordion bg-light"><p style="margin: 0; padding-left: 0; position: relative; left: -14px;">{{eachperusahaan.perusahaan}}
