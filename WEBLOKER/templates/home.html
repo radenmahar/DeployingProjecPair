@@ -1,0 +1,137 @@
+{% extends "base/base.html" %}
+
+{% block home %}
+    <div class="container-fluid bg-light" style="background-image: url('https://id.content.jobsdbcdn.com/Content/d0722/images/Shared/v8Revamp2/group_a_background.jpg');   background-repeat: no-repeat;
+    ;background-size: 1300px 300px;">
+        <div class="container">
+
+
+                <div class="row justify-content-center" >
+                    <div class="col-5">
+                        <img src="" width="1297px" alt="">
+                        <br>
+                        <h3 style="color: darkblue">
+                                Buat profil anda di jobsDB agar perusahaan yang sesuai dapat menemukan anda.
+                        </h3>
+                        <br>
+                        <button type="button" style="width: 220px; heigth: 48.8px;background-color: #F9A111; font-size: 24px;" class="btn border-dark text-white">
+                            <strong>
+                            Mulai Sekarang
+                            </strong>    
+                        </button>
+
+                    </div>
+                    <div class="col-5">
+                        <figure style="width: 565px; overflow:hidden; margin:0px;" >
+
+                        
+                        <img src="https://id.content.jobsdbcdn.com/Content/d0722/images/Shared/v8Revamp2/mobile_profile_id.png" height="263px" style="margin: 0px 0px -40px 0px;  display: block; " alt="">
+                    </figure>
+                    </div>
+                </div>
+                    <div class="row justify-content-center" style="z-index: 10; background-color: #0F2C55;">
+                        <div class="col-11 text-white ">
+                            <h5 class="text-bold" style="margin:5px 2px;">
+                                Pencarian 5,700 Lowongan Kerja
+                            </h5>
+                            <form method="GET">
+                                    <input type="text" name="search" style="width: 800px" placeholder="Masukkan jabatan atau perusahaan">
+                                    <button type="submit text-center" style="width: 100px; heigth: 48.8px;background-color: #F9A111; font-size: 18px;" class="btn border-dark text-white">
+                                            <strong>
+                                            Cari
+                                            </strong>    
+                                        </button>
+                            </form>
+                            <br>
+                        </div>
+                    </div>
+                <br>
+        </div>
+
+
+
+        <div class="container bg-white">
+            <div class="row">
+                <div class="col-8">
+
+                       <div class="row justify-content-center">
+                            <br>
+                                
+                            <div class="col-11" style="margin-bottom: 20px;">
+                                <div class="container-fluid bg-dark">
+                                    <div class="row">
+                                        <div class="col-12 text-primary ">
+                                            Menampilkan
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid " style="background-color: lightgray">
+                                        <div class="row justify-content-start">
+                                            <div class="col-6 text-dark ">
+                                                <p style="font-size: 12px; margin-top: 10px;">
+                                                    Pekerjaan Yang Terakhir Post
+                                                </p>
+                                            </div>
+                                            <div class="col-6 text-dark text-right">
+                                                <p style="font-size: 12px; margin-top: 10px;">
+                                                        
+                                                    </p>
+                                            </div>
+                                            {% for perusahaan in perusahaan_show %}
+                                            <div class="col-11" style="padding-bottom: 10px;">
+                                                    <a href="detail/{{perusahaan.id}}">
+                                            <h6>
+                                                {{perusahaan.posisi}}
+                                            </h6>
+                                        </a>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    
+                                                        <h6 style="font-size: 14px;">
+                                                                {{perusahaan.perusahaan}}
+                                                            </h6>
+                                                            <p style="font-size: 10px;">
+                                                                {{perusahaan.lokasi}}
+                                                            </p>
+                                                            <p style="font-size: 10px;">
+                                                                {{perusahaan.created_on}}
+                                                            </p>
+                                                            
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <img src="{{perusahaan.logo}}" alt="">
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                </div>
+                            </div>
+                           </div>
+    
+
+                </div>
+
+
+                <div class="col-4">
+                    <div style="margin: 0px 0px 10px 0px;">
+                        <img src="https://id.jobsdb.com/images/d88adfe00dee535488a3770ca342ee89.gif" alt="">
+                    </div>
+                    <div style="margin: 0px 0px 10px 0px;">
+                        <img src="https://id.jobsdb.com/images/19b70fb7d3f5e7f93c5fdcfc5b957e94.png" alt="">
+                    </div>
+                    <div style="margin: 0px 0px 10px 0px;">
+                          <h6 class="text-primary">
+                              Let's Explore jobsDB
+                          </h6>
+                    </div>
+                    <div style="margin: 0px 0px 10px 0px;">
+                    <img src="https://id.jobsdb.com/images/e967bd41cbadd5bb94efb6e951ff576e.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

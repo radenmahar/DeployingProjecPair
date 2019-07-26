@@ -1,0 +1,195 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JobsDB</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="{% url 'home' %}">
+                    <img src="https://i.postimg.cc/3NNk5NLz/home-logo-main01-2.png" class="img-fluid" alt="Responsive image">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class=" text-center">
+                        <ul class="nav">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle Button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Country</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                      <a class="dropdown-item" href="#">English</a>
+                                      <a class="dropdown-item" href="#">Bahasa</a>
+                                    </div>
+                                  </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">English</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bahasa</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-5 justify-content-end text-right Class1">
+                    <a class="btn btn-info" href="#" role="button"><b>Log in</b></a>
+                    <a class="btn btn-info" href="#" role="button"><b>Sign up</b></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light text-white " style="background-color: #0F2C55">
+        <div class="container">
+            <a class="navbar-brand text-white" style="font-size: 15px;" href="{% url 'home' %}"><strong>BERANDA</strong></a>
+            <a class="navbar-brand text-white" style="font-size: 15px;" href="#"><strong>MY JOBSDB</strong></a>
+            <a class="navbar-brand text-white" style="font-size: 15px;" href="#"><strong>TIPS DUNIA KERJA</strong></a>
+            <a class="navbar-brand text-white" style="font-size: 15px;" href="#"><strong>EVENT</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#"> <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#"></a>
+                <a class="nav-item nav-link" href="#"></a>
+                <a class="nav-item nav-link disabled" href="#"></a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    {% block home%}
+
+    {% endblock %}
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row text-white" style="background-color: #062e56;">
+                <div class="col-md-4" style="color: deepskyblue ; font-size: 12px;">
+                    <br>
+                    <br>
+                    <img style="color: white;" src="https://id.content.jobsdbcdn.com/Content/d0723/images/Shared/v8Revamp2/logo_ftr_blue.png" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <br>
+                    <p>Informasi Pemasangan Iklan: <br> Telp.: +62 21 3002 8899 <br> Fax: +62 21 3002 8888 / +62 21 5795 7733 </p>
+                    <p class="text-white">(Mon - Fri, 8:00am - 5:00pm)</p>
+                    <p>Email: <a href="">CS@jobsDB.co.id</a></p>
+                </div>
+                <div class=col-md-8>
+                    <div class="row text-white" style="font-size: 12px;">
+                        <div class="col-3">
+                            <br>
+                            <p style="color:deepskyblue; font-size: 16px;"><strong>
+                                Pencari Kerja
+                            </strong></p>
+                            <p>
+                                Daftar Pekerjaan
+                            </p>
+                            <p>
+                                Daftarkan CV
+                            </p>
+                            <p>
+                                Job Alerts
+                            </p>
+                            <p>
+                                My jobsDB
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <br>
+                            <p style="color:deepskyblue; font-size: 16px;"><strong>
+                                Perusahaan
+                            </strong></p>
+                            <p>
+                                Tayangkan Iklan
+                            </p>
+                            <p>
+                                Cari Kandidat
+                            </p>
+                            <p>
+                                Beriklan Bersama Kami
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <br>
+                            <p style="color:deepskyblue; font-size: 16px;"><strong>
+                                Tentang Kami
+                            </strong></p>
+                            <p>
+                                Tentang jobsDB
+                            </p>
+                            <p>
+                                FAQ
+                            </p>
+                            <p>
+                                Karir@jobsDB
+                            </p>
+                            <p>
+                                Hubungi Kami
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <br>
+                            <p style="color:deepskyblue; font-size: 16px;"><strong>
+                                Perkakas
+                            </strong></p>
+                            <p>
+                                Versi Mobile
+                            </p>
+                            <p>
+                                RSS
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: black; padding:0">
+                <div class="col-md-6">  
+                    <p style="color: #999; text-align: left; margin:0; font-size:12px;">Copyright © 1998-2019, jobsDB. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: #999; text-align: right; margin:0; font-size: 12px;">Privacy Statement | Terms & Conditions | Site Map</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbarDropdownMenuLink");
+        if (x.className === "Button") {
+                x.className += " responsive";
+                } 
+        else {
+                x.className = "Button";
+            }
+        }
+    </script>
+<script>
+        $(document).ready(function(){ 
+            $("#txtSearch").autocomplete({
+                source: "/ajax_calls/search/",
+                minLength: 2,
+                open: function(){
+                    setTimeout(function () {
+                        $('.ui-autocomplete').css('z-index', 99);
+                    }, 0);
+                }
+              });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{% extends "base/base_search.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid bg-light">
+    <div class="row">
+        <div class="col-12">
+            {{jumlah_lowongan}} lowongan mengandung <strong>{{inputan_search}}</strong> di <strong>semua lokasi</strong>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+        {% for eachlowongan in lowongan %}
+        
+       
+    <div class="row justify-content-center">
+         <div class="col-6 bg-light border-dark">
+             <a href="detail/{{eachlowongan.id}}">{{eachlowongan.posisi}}</a>
+        <div class="row">
+            <div class="col-6">
+                <button class="accordion bg-light"><p style="margin: 0; padding-left: 0; position: relative; left: -14px;">{{eachlowongan.perusahaan|linebreaksbr}}
+                    </p></button>
+                <div class="panel">
+                    <p>We are PMA company which focusing in Valve Refurbishment and Re Engineering</p>
+                </div>
+                <p style="margin: 0 0 0 0;">
+                    {{eachlowongan.lokasi}}
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="{{eachlowongan.logo}}" alt="">
+            </div>
+          <p style="font-size: 10px; margin-left: 15px;">  
+            {{eachlowongan.updated_on}}
+        </p>
+        </div>
+        </div>
+       
+    </div>
+    
+    {% endfor %}
+
+
+    {% for eachperusahaan in perusahaan %}
+       
+    <div class="row justify-content-center">
+         <div class="col-6 bg-light border-dark">
+             <a href="detail/{{eachperusahaan.id}}">{{eachperusahaan.posisi}}</a>
+        <div class="row">
+            <div class="col-6">
+                <button class="accordion bg-light"><p style="margin: 0; padding-left: 0; position: relative; left: -14px;">{{eachperusahaan.perusahaan}}
+                    </p></button>
+                <div class="panel">
+                    <p>{{tentang_two.tentang}}</p>
+                </div>
+                <p style="margin: 0 0 0 0;">
+                    {{eachperusahaan.lokasi}}
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="{{eachlowongan.logo}}" alt="">
+            </div>
+          <p style="font-size: 10px; margin-left: 15px;">  
+            {{eachperusahaan.updated_on}}
+        </p>
+        </div>
+        </div>
+       
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+        .accordion {
+          background-color: white;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: white; 
+        }
+        
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+        }
+        </style>
+
+
+{% endblock %}
+{% block title %}{{inputan_search}}{% endblock %}

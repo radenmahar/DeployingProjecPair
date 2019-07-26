@@ -1,0 +1,70 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block home %}
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="{{lowongan.header_logo}}" alt="" style="width: -webkit-fill-available;     height: 164px;">
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div></div>
+            <div class="col-md-4">
+                <h3><b>{{lowongan.position}}</b></h3>
+                <h5>{{lowongan.perusahaan}}</h5>
+                <p>{{lowongan.lokasi}}</p>
+            </div>
+            <div class="col-md-4 text-left">
+                <img src="{{lowongan.logo}}" alt="" style="position: relative; left: 201px;width: 363px; height: 164px;">
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-8">  
+                    <b>Kualifikasi :</b>
+                    <ul style="margin: 0px 0px 4px">    
+                        <li style="font-size: 14px;">{{lowongan.kualifikasi|linebreaksbr}}</li>
+                    </ul>
+                </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-md-8">
+                    <b>Jenis job posting ini :</b>
+                    <table>
+                            <tbody>
+                                <div class=></div>
+                                <tr>
+                                    <td>Level karir</td>
+                                    <td style="padding-left: 130px;">: {{lowongan.level_karir}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tahun Pengalaman</td>
+                                    <td style="padding-left: 130px;">: {{lowongan.tahun_pengalaman}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Kualifikasi pendidikan</td>
+                                    <td style="padding-left: 130px;">: {{lowongan.kualifikasi_pendidikan}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipe Pekerjaan</td>
+                                    <td style="padding-left: 130px;">: {{lowongan.tipe_pekerjaan}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Lainnya</td>
+                                    <td style="padding-left: 130px;">: {{lowongan.Lainnya}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-info" href="http://www.varleygroup.com/site/careers-at-varley" >Apply</button>
+    </div>
+    <br>
+{% endblock %}  
